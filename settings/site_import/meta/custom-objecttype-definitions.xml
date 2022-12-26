@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+  <custom-type type-id="apruvdTokens">
+    <display-name xml:lang="x-default">Apruvd Tokens</display-name>
+    <staging-mode>no-staging</staging-mode>
+    <storage-scope>site</storage-scope>
+    <key-definition attribute-id="id">
+      <type>string</type>
+      <min-length>0</min-length>
+    </key-definition>
+    <attribute-definitions>
+      <attribute-definition attribute-id="apruvdAccessToken">
+        <display-name xml:lang="x-default">Access Token</display-name>
+        <type>string</type>
+        <localizable-flag>false</localizable-flag>
+        <mandatory-flag>false</mandatory-flag>
+        <externally-managed-flag>true</externally-managed-flag>
+        <min-length>0</min-length>
+      </attribute-definition>
+      <attribute-definition attribute-id="apruvdAccessTokenExpiration">
+        <display-name xml:lang="x-default">Access Token Expiration</display-name>
+        <type>datetime</type>
+        <localizable-flag>false</localizable-flag>
+        <mandatory-flag>false</mandatory-flag>
+        <externally-managed-flag>true</externally-managed-flag>
+      </attribute-definition>
+      <attribute-definition attribute-id="apruvdBasicRules">
+        <display-name xml:lang="x-default">Basic Rules</display-name>
+        <type>string</type>
+        <localizable-flag>false</localizable-flag>
+        <mandatory-flag>false</mandatory-flag>
+        <externally-managed-flag>true</externally-managed-flag>
+        <min-length>0</min-length>
+      </attribute-definition>
+      <attribute-definition attribute-id="apruvdDataConnection">
+        <display-name xml:lang="x-default">Data Connection</display-name>
+        <type>boolean</type>
+        <mandatory-flag>false</mandatory-flag>
+        <externally-managed-flag>true</externally-managed-flag>
+      </attribute-definition>
+      <attribute-definition attribute-id="apruvdEnforceUniqueOrderId">
+        <display-name xml:lang="x-default">Enforce Unique Order ID</display-name>
+        <type>boolean</type>
+        <mandatory-flag>false</mandatory-flag>
+        <externally-managed-flag>true</externally-managed-flag>
+      </attribute-definition>
+      <attribute-definition attribute-id="apruvdRefreshToken">
+        <display-name xml:lang="x-default">Refresh Token</display-name>
+        <type>string</type>
+        <localizable-flag>false</localizable-flag>
+        <mandatory-flag>false</mandatory-flag>
+        <externally-managed-flag>true</externally-managed-flag>
+        <min-length>0</min-length>
+      </attribute-definition>
+      <attribute-definition attribute-id="apruvdRefreshTokenExpiration">
+        <display-name xml:lang="x-default">Refresh Token Expiration</display-name>
+        <type>datetime</type>
+        <localizable-flag>false</localizable-flag>
+        <mandatory-flag>false</mandatory-flag>
+        <externally-managed-flag>true</externally-managed-flag>
+      </attribute-definition>
+      <attribute-definition attribute-id="apruvdRequireNotesOnApproves">
+        <display-name xml:lang="x-default">Require Notes on Approves</display-name>
+        <type>boolean</type>
+        <mandatory-flag>false</mandatory-flag>
+        <externally-managed-flag>true</externally-managed-flag>
+      </attribute-definition>
+      <attribute-definition attribute-id="apruvdRequireNotesOnDeclines">
+        <display-name xml:lang="x-default">Require Notes on Declines</display-name>
+        <type>boolean</type>
+        <mandatory-flag>false</mandatory-flag>
+        <externally-managed-flag>true</externally-managed-flag>
+      </attribute-definition>
+      <attribute-definition attribute-id="apruvdServicePlan">
+        <display-name xml:lang="x-default">Service Plan</display-name>
+        <type>string</type>
+        <localizable-flag>false</localizable-flag>
+        <mandatory-flag>false</mandatory-flag>
+        <externally-managed-flag>true</externally-managed-flag>
+        <min-length>0</min-length>
+      </attribute-definition>
+      <attribute-definition attribute-id="apruvdStrictlyProtectPii">
+        <display-name xml:lang="x-default">Strictly protect PII</display-name>
+        <type>boolean</type>
+        <mandatory-flag>false</mandatory-flag>
+        <externally-managed-flag>true</externally-managed-flag>
+      </attribute-definition>
+      <attribute-definition attribute-id="apruvdTrainingData">
+        <display-name xml:lang="x-default">Training Data</display-name>
+        <type>boolean</type>
+        <mandatory-flag>false</mandatory-flag>
+        <externally-managed-flag>true</externally-managed-flag>
+      </attribute-definition>
+    </attribute-definitions>
+    <group-definitions>
+      <attribute-group group-id="general">
+        <display-name xml:lang="x-default">General</display-name>
+        <attribute attribute-id="apruvdRefreshToken"/>
+        <attribute attribute-id="apruvdRefreshTokenExpiration"/>
+        <attribute attribute-id="apruvdAccessToken"/>
+        <attribute attribute-id="apruvdAccessTokenExpiration"/>
+        <attribute attribute-id="apruvdDataConnection"/>
+        <attribute attribute-id="apruvdServicePlan"/>
+        <attribute attribute-id="apruvdRequireNotesOnApproves"/>
+        <attribute attribute-id="apruvdEnforceUniqueOrderId"/>
+        <attribute attribute-id="apruvdBasicRules"/>
+        <attribute attribute-id="apruvdRequireNotesOnDeclines"/>
+        <attribute attribute-id="apruvdTrainingData"/>
+        <attribute attribute-id="apruvdStrictlyProtectPii"/>
+      </attribute-group>
+    </group-definitions>
+  </custom-type>
+</metadata>

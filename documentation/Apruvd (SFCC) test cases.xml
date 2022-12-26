@@ -1,0 +1,912 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite id="" name="" >
+<node_order><![CDATA[]]></node_order>
+<details><![CDATA[]]></details> 
+<testsuite id="2019650" name="Business Manager Configurations" >
+<node_order><![CDATA[0]]></node_order>
+<details><![CDATA[<p>
+	Business Manager Configuration Page</p>
+]]></details> 
+
+<testcase internalid="2022286" name="Add Cartridge in Cartridge Path">
+	<node_order><![CDATA[100]]></node_order>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	Add Cartridge in Cartridge Path</p>
+]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Log into Business Manager</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	Click on Administration&gt;Site &gt;&nbsp; Manage Sites&nbsp;and select the site where you wish to add the cartridge.&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Merchant should be redirected to the site where the cartridge needs to be installed.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	Click on the Settings tab.</p>
+]]></actions>
+	<expectedresults><![CDATA[<div>
+	The cartridge path for SFRA, SiteGenesis and Business Manager after the change should be respectively:</div>
+<ul>
+	<li>
+		int_apruvd_sfra:int_apruvd:app_storefront_base</li>
+	<li>
+		int_apruvd:app_storefront_controllers:app_storefront_core</li>
+	<li>
+		bm_apruvd:int_apruvd:bm_custom_plugin</li>
+</ul>
+<div>
+	&nbsp;</div>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	Click the Apply button.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	The cartridge will be added on the cartridge path.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="2022292" name="Import metadata">
+	<node_order><![CDATA[101]]></node_order>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	Import metadata</p>
+]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Navigate to Administration &gt;Site Development &gt; Import &amp; Export.</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	Click on the Upload button on the right.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Upload and import metadata.xml from metadata folder.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	Go to Administration &gt;&nbsp; Operations &gt;&nbsp; Import &amp; Export&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Check that upload and import services.xml and jobs.xml from metadata folder are present</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="2022297" name="Apruvd custom site preferences">
+	<node_order><![CDATA[102]]></node_order>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	Apruvd custom site preferences</p>
+]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Go to Merchant Tools &gt; Site Preferences &gt; Custom Site Preference Groups and find preference group Apruvd</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	User should be on the approved group</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	Check the values for the following fields:</p>
+<ul>
+	<li>
+		Apruvd Merchant ID</li>
+	<li>
+		Apruvd API Key ID</li>
+	<li>
+		Apruvd API Key Secret</li>
+	<li>
+		Organization ID</li>
+	<li>
+		Account ID&nbsp;&nbsp;</li>
+</ul>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Values for fields Apruvd Merchant ID, Apruvd API Key ID, Apruvd API Key Secret, Organization ID, Account ID are provided by Apruvd during registration.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	Check Page ID Mapping field</p>
+]]></actions>
+	<expectedresults><![CDATA[<div>
+	Page ID Mapping contains a JSON with mapping controller calls to page IDs that will be used in Apruvd script call.</div>
+<div>
+	&nbsp;</div>
+<div>
+	If a specific page ID is not mapped in the preference, controller call will be used instead.</div>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	Check Indemnified Payment Methods option</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Indemnified Payment Methods contains payment methods that are guaranteed against fraud risk. If order contains such payment method, the order won&rsquo;t be elevated for Apruvd review.</p>
+<p>
+	Some of the well-known providers of indemnified payments are:</p>
+<ul>
+	<li>
+		Pay with Amazon</li>
+	<li>
+		Webinterpret</li>
+	<li>
+		Affirm</li>
+	<li>
+		Houzz&nbsp;</li>
+</ul>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>
+	Validate Webhook API Key and Webhook API Key Secret fields</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Webhook API Key and Webhook API Key Secret are used for authorization when webhooks from Apruvd are sending requests to SFCC endpoints. These two values are defined during Webhook creation in Apruvd console.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>
+	See Installation Start Date&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	<strong><em>Installation Start Date </em></strong>is used for determining which orders are historical and which orders are sent to Apruvd for review.</p>
+<p>
+	&nbsp;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[7]]></step_number>
+	<actions><![CDATA[<p>
+	Check&nbsp;Accept Data Corrections by Default&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Accept Data Corrections by Default determines if order data corrections that come from Apruvd should automatically change order object in SFCC. If &lsquo;No&rsquo; is selected, data corrections will be available in order notes.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="2022371" name="PDP - Apruvd group">
+	<node_order><![CDATA[103]]></node_order>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	PDP - Apruvd group&nbsp;</p>
+]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Go to BM &gt;&nbsp;Merchant Tools &gt;&nbsp; Products and Catalogs &gt;&nbsp; Products and select a product</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	User should be on that specific PDP</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	Scroll down the page till you will be able to see Apruvd group&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	The group should be added on PDP</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	Check the options aveilable for&nbsp; &quot;Is high risk&quot;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	If a product is considered high risk for fraud, on Product level set Is High Risk under Apruvd group to true.&nbsp;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="2022376" name="Configure shipping methods">
+	<node_order><![CDATA[104]]></node_order>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	Configure shipping methods</p>
+]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Go to BM &gt; Merchant Tools &gt;&nbsp; Ordering &gt;&nbsp; Shipping Methods</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	User should be able to see the shipping methods used for checkout</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	Select one shipping method&nbsp;and search for Apruvd Shipping Speed drop down</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	On shipping method level select one of the values for Apruvd Shipping Speed (if none value is chosen, Standard will be default):</p>
+<ul>
+	<li>
+		Standard</li>
+	<li>
+		Third day</li>
+	<li>
+		Second day</li>
+	<li>
+		Next day</li>
+	<li>
+		Some day</li>
+	<li>
+		International</li>
+	<li>
+		International Expedited</li>
+	<li>
+		Express Saturday&nbsp;</li>
+</ul>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	Place one order with that each Aptuvd shipping spead option and see the functionality</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Aprovd shipping speed should be as per selected option&nbsp;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="2022387" name="Apruvd Module Roles ">
+	<node_order><![CDATA[105]]></node_order>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	Apruvd Module Roles</p>
+]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Go to BM &gt;&nbsp;Administration &gt;&nbsp; Organization &gt;&nbsp; Roles &gt; [name of the role] - Business Manager Modules</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Merchants that are responsible for handling orders and sending to Apruvd for review need to have additional Business Manager Modules permissions set for Apruvd Module.&nbsp;</p>
+<p>
+	The Business Manager Module is available on Site level and it provides order search and elevate functionality.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	See if mearchents that have permission to the business manager modulesare able to review orders&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Merchants will then review orders and if needed elevate to Apruvd.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+</testsuite><testsuite id="2022397" name="Transactions" >
+<node_order><![CDATA[1]]></node_order>
+<details><![CDATA[<p>
+	Transactions</p>
+]]></details> 
+<testsuite id="2022284" name="V3" >
+<node_order><![CDATA[2]]></node_order>
+<details><![CDATA[<p>
+	V3</p>
+]]></details> 
+
+<testcase internalid="2022406" name="Transaction creation - overview">
+	<node_order><![CDATA[1]]></node_order>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	Transaction creation - overview</p>
+]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Place an order as a guest or log in user with vaild data</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	When order is placed, transaction is created in Apruvd for fraud protection.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	On Apruvd dashboard see if the order was registered&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	The transaction should be on Apruvd dashboard</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	Check the statuses for an order</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	The following statuses can be seen for one order on transactions page:</p>
+<ul>
+	<li>
+		Reviewing</li>
+	<li>
+		Submitted</li>
+	<li>
+		Approved&nbsp;</li>
+	<li>
+		Declined&nbsp;</li>
+</ul>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	Go to BM &gt; Mearchant tools &gt; Apruvd &gt; Orders and see if the transaction was registered&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	The transaction should be registered on Approve Orders Dashboard</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>
+	Access&nbsp;Merchant Tools &gt;&nbsp; Ordering &gt;&nbsp; Orders and click on your order</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	User should be able to see the same details as per the one added on storefront and on Apruvd dashboard.&nbsp;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="2022480" name="Transaction creation - Apruvd Status">
+	<node_order><![CDATA[2]]></node_order>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	Transaction creation - Apruvd Status</p>
+]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Place an order as a guest or log in user</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	The order should be placed in BM</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	Access BM&gt; Merchant Tools &gt;&nbsp; Ordering &gt;&nbsp; Orders and click on your order</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Details regarding the order should be seen&nbsp;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	Switch from General tab to Attributes on the already open order&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	User should be on Attributes tab of the order&nbsp;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	Check the&nbsp; status for &quot;Apruvd Status&quot;&nbsp;&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Once an order was created Apruvd status should be:&nbsp;Reviewing&nbsp;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+</steps>
+</testcase>
+
+<testcase internalid="2022398" name="Transaction failed during order creation">
+	<node_order><![CDATA[3]]></node_order>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	Transaction failed during order creation</p>
+]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	On storefront as a guest, add a product to the cart&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	The product should be added to the cart</p>
+<p>
+	&nbsp;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	On checkout click on &quot;Checkout as guest&quot; CTA&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	User should navigate&nbsp; to shipping step</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	Add a valid shipping address and select a shipping method, then click on Payment&nbsp; CTA</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	User should be redirected to Payment step&nbsp;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	Add an invalid credit card and click on Place order&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	User should not be able to place the order&nbsp;</p>
+<p>
+	&nbsp;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>
+	Go in BM &gt;&nbsp;Merchant Tools &gt;&nbsp; Ordering &gt;&nbsp; Orders see the latest order status</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	If something wrong was added during checkout no Apruvd status will be send on attributes tab.&nbsp;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>
+	Follow the same steps for log in users</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	The same results as per guests should be seen. No Apruvd status will be send on attributes tab.&nbsp;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+</testsuite>
+
+<testsuite id="2022426" name="Apruvd Orders Dashboard" >
+<node_order><![CDATA[1]]></node_order>
+<details><![CDATA[<p>
+	Apruvd Orders Dashboard</p>
+]]></details> 
+
+<testcase internalid="2022918" name="Apruve Orders Dashboard overview">
+	<node_order><![CDATA[0]]></node_order>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	Apruve Orders Dashboard overview</p>
+]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Go to BM &gt; Merchant Tools &gt; Apruvd&nbsp; &gt; Orders</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Mearchant should be on&nbsp;Apruvd Orders Dashboard</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	See the elements displayed on the page:</p>
+<ul>
+	<li>
+		search</li>
+	<li>
+		number of results page&nbsp;</li>
+	<li>
+		next page/previous page if more then 20 orders&nbsp;</li>
+	<li>
+		order details table&nbsp;</li>
+	<li>
+		back CTA</li>
+</ul>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	All required elements should be seen on the page</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	Check the column data from order details table:</p>
+<ul>
+	<li>
+		Order No</li>
+	<li>
+		Customer Name</li>
+	<li>
+		Customer Email</li>
+	<li>
+		Total Price</li>
+	<li>
+		Date/Time</li>
+	<li>
+		Order Status</li>
+	<li>
+		Apruvd Order Status</li>
+	<li>
+		Action&nbsp;</li>
+</ul>
+<p>
+	&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	All column should be seen on the&nbsp;Apruvd Orders Dashboard</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	Check if the information from order details table are vaild&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	The same data introduced by the user while placing the order should be seen&nbsp;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="2022427" name="Order Search">
+	<node_order><![CDATA[1]]></node_order>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	Order Search - Apruvd Orders Dashboard</p>
+]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Go to BM &gt; Merchant Tools &gt;&nbsp;Apruvd&nbsp; &gt; Orders</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	User should be on&nbsp;Apruvd Orders Dashboard&nbsp;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	Check if the Search input box and page is accessible.&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Search page allows the user to find the orders simply and quickly by:</p>
+<ul>
+	<li>
+		Order ID</li>
+	<li>
+		Customer Email</li>
+	<li>
+		Customer Name</li>
+</ul>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	Search an order by Order ID&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	By entering a valid order number user should be able to see the result</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	Make a search by customer email</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	All orders placed by that specific customer should be displayed on the result page.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>
+	Decide to search by customer name</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	The search result will display all orders related to the text entred.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="2022452" name="Order Search - Results Page">
+	<node_order><![CDATA[2]]></node_order>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Check the default results page.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	The search result will display all orders related to the text entred.</p>
+<p>
+	Search result will be displayed in Simple and Advanced Search.</p>
+<p>
+	Default result page:</p>
+<ul>
+	<li>
+		Display 20 results per page.</li>
+	<li>
+		Descending order by order nr.</li>
+	<li>
+		Below the result on the left side, display the number of results.</li>
+	<li>
+		Below the result, left aligned, display Next page/ previous page</li>
+</ul>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	Click on Next page link</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	On click on Next page link, the merchant is able to see next results.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	Click on Previous page link&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	On click on Previous page link, the merchant is able to see previous results.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	Click on Back CTA</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	<font color="#333333">User will be redirected to Orders&nbsp; from&nbsp;</font>Apruvd Business Manager Module.</p>
+<div>
+	&nbsp;</div>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="2022446" name="Order Search - Advanced Search - No results">
+	<node_order><![CDATA[3]]></node_order>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Go to&nbsp;BM &gt; Mearchent tools &gt; Apruvd &gt;&nbsp; Orders &gt; Apruvd Orders Dashboard&nbsp;&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	User should be on&nbsp;Apruvd Orders Dashboard&nbsp;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	Search for an order by using an invalid:</p>
+<p>
+	- order ID</p>
+<p>
+	- email address</p>
+<p>
+	- customer number</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	No result should be displayed on the page.</p>
+<p>
+	When the search returns no results, display a message &quot;0 order(s) found.&quot; on the left , top corner.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+</testsuite></testsuite>

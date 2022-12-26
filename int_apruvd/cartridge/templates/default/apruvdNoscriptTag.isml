@@ -1,0 +1,11 @@
+<isset name="SitePreferences" value="${require('dw/system/Site').current.preferences;}" scope="page"/>
+<isset name="apruvdHelper" value="${require('*/cartridge/scripts/service/apruvd')}" scope="page" />
+<isset name="orgId" value="${SitePreferences.custom.apruvdOrganizationId}" scope="page"/>
+<isset name="sessionId" value="${session.sessionID}" scope="page"/>
+<isset name="pageId" value="${pdict.pageId}" scope="page"/>
+<isif condition="${!empty(pageId) && pageId !== 'undefined' && !empty(orgId)}">
+    <noscript>
+        <iframe style="width: 100px; height: 100px; border: 0; position: absolute; top: -5000px;" src="https://mjs.apruvd.com/${SitePreferences.custom.MJSId}/entry.js?session_id=${session_id}">
+        </iframe>
+    </noscript>
+</isif>

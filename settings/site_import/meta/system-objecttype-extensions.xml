@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+  <type-extension type-id="Order">
+    <custom-attribute-definitions>
+      <attribute-definition attribute-id="apruvdCheckOrder">
+        <display-name xml:lang="x-default">Re-Check Order in Apruvd</display-name>
+        <type>boolean</type>
+        <mandatory-flag>false</mandatory-flag>
+        <externally-managed-flag>false</externally-managed-flag>
+      </attribute-definition>
+      <attribute-definition attribute-id="apruvdStatus">
+        <display-name xml:lang="x-default">Apruvd Status</display-name>
+        <type>string</type>
+        <mandatory-flag>false</mandatory-flag>
+        <externally-managed-flag>true</externally-managed-flag>
+        <min-length>0</min-length>
+      </attribute-definition>
+      <attribute-definition attribute-id="apruvdTransactionID">
+        <display-name xml:lang="x-default">Apruvd Transaction ID</display-name>
+        <type>string</type>
+        <mandatory-flag>false</mandatory-flag>
+        <externally-managed-flag>true</externally-managed-flag>
+        <min-length>0</min-length>
+      </attribute-definition>
+      <attribute-definition attribute-id="apruvdBasicRulesTripped">
+        <display-name xml:lang="x-default">Basic Rules Tripped</display-name>
+        <type>string</type>
+        <mandatory-flag>false</mandatory-flag>
+        <externally-managed-flag>true</externally-managed-flag>
+        <min-length>0</min-length>
+      </attribute-definition>
+      <attribute-definition attribute-id="apruvdChargebackCaseId">
+        <display-name xml:lang="x-default">Chargeback Case ID</display-name>
+        <type>string</type>
+        <mandatory-flag>false</mandatory-flag>
+        <externally-managed-flag>true</externally-managed-flag>
+        <min-length>0</min-length>
+      </attribute-definition>
+      <attribute-definition attribute-id="apruvdChargebackPaid">
+        <display-name xml:lang="x-default">Chargeback Paid</display-name>
+        <type>boolean</type>
+        <mandatory-flag>false</mandatory-flag>
+        <externally-managed-flag>true</externally-managed-flag>
+      </attribute-definition>
+      <attribute-definition attribute-id="apruvdChargebackStatus">
+        <display-name xml:lang="x-default">Chargeback Status</display-name>
+        <type>string</type>
+        <mandatory-flag>false</mandatory-flag>
+        <externally-managed-flag>true</externally-managed-flag>
+        <min-length>0</min-length>
+      </attribute-definition>
+    </custom-attribute-definitions>
+    <group-definitions>
+      <attribute-group group-id="apruvd">
+        <display-name xml:lang="x-default">Apruvd</display-name>
+        <attribute attribute-id="apruvdCheckOrder"/>
+        <attribute attribute-id="apruvdStatus"/>
+        <attribute attribute-id="apruvdBasicRulesTripped"/>
+        <attribute attribute-id="apruvdChargebackCaseId"/>
+        <attribute attribute-id="apruvdChargebackStatus"/>
+        <attribute attribute-id="apruvdChargebackPaid"/>
+        <attribute attribute-id="apruvdTransactionID"/>
+      </attribute-group>
+    </group-definitions>
+  </type-extension>
+  <type-extension type-id="Product">
+    <custom-attribute-definitions>
+      <attribute-definition attribute-id="apruvdIsHighRisk">
+        <display-name xml:lang="x-default">Is High Risk</display-name>
+        <type>boolean</type>
+        <site-specific-flag>false</site-specific-flag>
+        <mandatory-flag>false</mandatory-flag>
+        <visible-flag>false</visible-flag>
+        <externally-managed-flag>false</externally-managed-flag>
+        <order-required-flag>false</order-required-flag>
+        <externally-defined-flag>false</externally-defined-flag>
+      </attribute-definition>
+    </custom-attribute-definitions>
+    <group-definitions>
+      <attribute-group group-id="apruvd">
+        <display-name xml:lang="x-default">Apruvd</display-name>
+        <attribute attribute-id="apruvdIsHighRisk"/>
+      </attribute-group>
+    </group-definitions>
+  </type-extension>
+  <type-extension type-id="ShippingMethod">
+    <custom-attribute-definitions>
+      <attribute-definition attribute-id="apruvdShippingSpeed">
+        <display-name xml:lang="x-default">Apruvd Shipping Speed</display-name>
+        <type>enum-of-string</type>
+        <localizable-flag>false</localizable-flag>
+        <mandatory-flag>false</mandatory-flag>
+        <externally-managed-flag>false</externally-managed-flag>
+        <value-definitions>
+          <value-definition default="true">
+            <display xml:lang="x-default">Standard</display>
+            <value>Standard</value>
+          </value-definition>
+          <value-definition>
+            <display xml:lang="x-default">Expedited</display>
+            <value>Expedited</value>
+          </value-definition>
+          <value-definition>
+            <display xml:lang="x-default">Third Day</display>
+            <value>Third Day</value>
+          </value-definition>
+          <value-definition>
+            <display xml:lang="x-default">Second Day</display>
+            <value>Second Day</value>
+          </value-definition>
+          <value-definition>
+            <display xml:lang="x-default">Next Day</display>
+            <value>Next Day</value>
+          </value-definition>
+          <value-definition>
+            <display xml:lang="x-default">Same Day</display>
+            <value>Same Day</value>
+          </value-definition>
+          <value-definition>
+            <display xml:lang="x-default">International</display>
+            <value>International</value>
+          </value-definition>
+          <value-definition>
+            <display xml:lang="x-default">International Expedited</display>
+            <value>International Expedited</value>
+          </value-definition>
+          <value-definition>
+            <display xml:lang="x-default">Express Saturday</display>
+            <value>Express Saturday</value>
+          </value-definition>
+        </value-definitions>
+      </attribute-definition>
+    </custom-attribute-definitions>
+    <group-definitions>
+      <attribute-group group-id="apruvd">
+        <display-name xml:lang="x-default">Apruvd</display-name>
+        <attribute attribute-id="apruvdShippingSpeed"/>
+      </attribute-group>
+    </group-definitions>
+  </type-extension>
+  <type-extension type-id="SitePreferences">
+    <custom-attribute-definitions>
+      <attribute-definition attribute-id="apruvdEnabled">
+        <display-name xml:lang="x-default">Enable Apruvd</display-name>
+        <type>boolean</type>
+        <mandatory-flag>false</mandatory-flag>
+        <externally-managed-flag>false</externally-managed-flag>
+        <default-value>false</default-value>
+      </attribute-definition>
+      <attribute-definition attribute-id="apruvdUseAsSecondFraudDetection">
+        <display-name xml:lang="x-default">Use Apruvd as Second Fraud Detection</display-name>
+        <type>boolean</type>
+        <mandatory-flag>false</mandatory-flag>
+        <externally-managed-flag>false</externally-managed-flag>
+        <default-value>false</default-value>
+      </attribute-definition>
+      <attribute-definition attribute-id="apruvdAcceptDataCorrectionsByDefault">
+        <display-name xml:lang="x-default">Accept Data Corrections by Default</display-name>
+        <type>boolean</type>
+        <mandatory-flag>false</mandatory-flag>
+        <externally-managed-flag>false</externally-managed-flag>
+        <default-value>true</default-value>
+      </attribute-definition>
+      <attribute-definition attribute-id="apruvdAccountId">
+        <display-name xml:lang="x-default">Account ID</display-name>
+        <type>string</type>
+        <mandatory-flag>false</mandatory-flag>
+        <externally-managed-flag>true</externally-managed-flag>
+        <min-length>0</min-length>
+        <default-value>102834</default-value>
+      </attribute-definition>
+      <attribute-definition attribute-id="apruvdApiKeyId">
+        <display-name xml:lang="x-default">Apruvd API Key ID</display-name>
+        <type>string</type>
+        <mandatory-flag>false</mandatory-flag>
+        <externally-managed-flag>false</externally-managed-flag>
+        <min-length>0</min-length>
+      </attribute-definition>
+      <attribute-definition attribute-id="apruvdApiKeySecret">
+        <display-name xml:lang="x-default">Apruvd API Key Secret</display-name>
+        <type>password</type>
+        <mandatory-flag>false</mandatory-flag>
+        <externally-managed-flag>false</externally-managed-flag>
+      </attribute-definition>
+      <attribute-definition attribute-id="MJSId">
+        <display-name xml:lang="x-default">Merchant JS ID</display-name>
+        <type>string</type>
+        <mandatory-flag>false</mandatory-flag>
+        <externally-managed-flag>false</externally-managed-flag>
+        <min-length>0</min-length>
+      </attribute-definition>
+      <attribute-definition attribute-id="apruvdIndemnifiedPaymentMethods">
+        <display-name xml:lang="x-default">Indemnified Payment Methods</display-name>
+        <type>set-of-string</type>
+        <mandatory-flag>false</mandatory-flag>
+        <externally-managed-flag>false</externally-managed-flag>
+      </attribute-definition>
+      <attribute-definition attribute-id="apruvdInstallationStartDate">
+        <display-name xml:lang="x-default">Installation Start Date</display-name>
+        <type>datetime</type>
+        <mandatory-flag>false</mandatory-flag>
+        <externally-managed-flag>false</externally-managed-flag>
+      </attribute-definition>
+      <attribute-definition attribute-id="apruvdMerchantId">
+        <display-name xml:lang="x-default">Apruvd Merchant ID</display-name>
+        <type>string</type>
+        <mandatory-flag>false</mandatory-flag>
+        <externally-managed-flag>false</externally-managed-flag>
+        <min-length>0</min-length>
+      </attribute-definition>
+      <attribute-definition attribute-id="apruvdMode">
+        <display-name xml:lang="x-default">Mode</display-name>
+        <type>enum-of-string</type>
+        <mandatory-flag>false</mandatory-flag>
+        <externally-managed-flag>false</externally-managed-flag>
+        <value-definitions>
+          <value-definition default="true">
+            <display xml:lang="x-default">Live</display>
+            <value>Live</value>
+          </value-definition>
+          <value-definition>
+            <display xml:lang="x-default">Trial</display>
+            <value>Trial</value>
+          </value-definition>
+          <value-definition>
+            <display xml:lang="x-default">Test</display>
+            <value>Test</value>
+          </value-definition>
+        </value-definitions>
+      </attribute-definition>
+      <attribute-definition attribute-id="apruvdOrganizationId">
+        <display-name xml:lang="x-default">Organization ID</display-name>
+        <type>string</type>
+        <mandatory-flag>false</mandatory-flag>
+        <externally-managed-flag>true</externally-managed-flag>
+        <min-length>0</min-length>
+        <default-value>1my18z3w</default-value>
+      </attribute-definition>
+      <attribute-definition attribute-id="apruvdPageIdMapping">
+        <display-name xml:lang="x-default">Page ID Mapping</display-name>
+        <type>text</type>
+        <mandatory-flag>false</mandatory-flag>
+        <externally-managed-flag>false</externally-managed-flag>
+      </attribute-definition>
+      <attribute-definition attribute-id="apruvdWebhookApiKey">
+        <display-name xml:lang="x-default">Webhook API Key</display-name>
+        <type>string</type>
+        <mandatory-flag>false</mandatory-flag>
+        <externally-managed-flag>false</externally-managed-flag>
+        <min-length>0</min-length>
+      </attribute-definition>
+      <attribute-definition attribute-id="apruvdWebhookApiKeySecret">
+        <display-name xml:lang="x-default">Webhook API Key Secret</display-name>
+        <type>password</type>
+        <mandatory-flag>false</mandatory-flag>
+        <externally-managed-flag>false</externally-managed-flag>
+      </attribute-definition>
+    </custom-attribute-definitions>
+    <group-definitions>
+      <attribute-group group-id="apruvd">
+        <display-name xml:lang="x-default">Apruvd</display-name>
+        <attribute attribute-id="apruvdEnabled"/>
+        <attribute attribute-id="apruvdUseAsSecondFraudDetection"/>
+        <attribute attribute-id="apruvdMerchantId"/>
+        <attribute attribute-id="apruvdApiKeyId"/>
+        <attribute attribute-id="apruvdApiKeySecret"/>
+        <attribute attribute-id="apruvdOrganizationId"/>
+        <attribute attribute-id="apruvdAccountId"/>
+        <attribute attribute-id="apruvdPageIdMapping"/>
+        <attribute attribute-id="apruvdIndemnifiedPaymentMethods"/>
+        <attribute attribute-id="apruvdMode"/>
+        <attribute attribute-id="apruvdWebhookApiKey"/>
+        <attribute attribute-id="apruvdWebhookApiKeySecret"/>
+        <attribute attribute-id="apruvdInstallationStartDate"/>
+        <attribute attribute-id="apruvdAcceptDataCorrectionsByDefault"/>
+      </attribute-group>
+    </group-definitions>
+  </type-extension>
+</metadata>

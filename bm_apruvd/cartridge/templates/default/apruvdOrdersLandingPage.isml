@@ -1,0 +1,138 @@
+<isdecorate template="application/MenuFrame">
+<iscontent type="text/html" charset="UTF-8">
+<isinclude template="inc/Modules">
+
+<!-- Page Navigator -->
+<isset name="TOP_URL" value="${URLUtils.url('SiteNavigationBar-ShowMenuitemOverview', 'CurrentMenuItemId', 'apruvd')}" scope="page">
+<isbreadcrumb name1="Apruvd" url1="${TOP_URL}" name2="Apruvd Orders Dashboard">
+<!-- EO Page Navigator -->
+
+<form>
+    <table border="0" cellspacing="0" cellpadding="4" width="100%">
+        <tr valign="top">
+            <td>
+                <label for="orderId">Order ID: </label>
+                <input type="text" name="orderId" id="orderId" class="inputfield_en"/>
+                <label for="email">Customer Email: </label>
+                <input type="email" name="email" id="email" class="inputfield_en"/>
+                <label for="name">Customer Name: </label>
+                <input type="text" name="name" id="name" class="inputfield_en"/>
+                <input type="submit" name="search" value="Search" class="button"/>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                ${pdict.ordersCount} order(s) found.
+            </td>
+        </tr>
+        <tr>
+            <td class="error">
+                <isif condition="${request.httpParameterMap.isParameterSubmitted('error')}">
+                    An error occurred while processing the request.
+                </isif>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <isif condition="${!empty(pdict.prevPageUrl)}">
+                    <a href="${pdict.prevPageUrl}">Previous page</a>
+                </isif>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <isif condition="${!empty(pdict.nextPageUrl)}">
+                    <a href="${pdict.nextPageUrl}">Next page</a>
+                </isif>
+            </td>
+        </tr>
+    </table>
+</form>
+
+<!-- table list view -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td class="table_header w e s">Order No</td>
+        <td class="table_header e s">Customer Name</td>
+        <td class="table_header e s">Customer Email</td>
+        <td class="table_header e s">Total Price</td>
+        <td class="table_header e s">Date/Time</td>
+        <td class="table_header e s">Order Status</td>
+        <td class="table_header e s">Apruvd Order Status</td>
+        <td class="table_header e s">Action</td>
+    </tr>
+
+    <isloop items="${pdict.ordersIterator}" var="order">
+        <tr>
+            <td class="table_detail w e s" nowrap="nowrap">
+                ${order.orderNo}
+            </td>
+            <td class="table_detail e s" nowrap="nowrap">
+                ${order.getCustomerName()}
+            </td>
+            <td class="table_detail e s" nowrap="nowrap">
+                ${order.getCustomerEmail()}
+            </td>
+            <td class="table_detail e s" nowrap="nowrap">
+                ${dw.util.StringUtils.formatMoney(order.getTotalGrossPrice())}
+            </td>
+            <td class="table_detail e s" nowrap="nowrap">
+                ${order.creationDate.toLocaleString()}
+            </td>
+            <td class="table_detail e s" nowrap="nowrap">
+                ${order.status}
+            </td>
+            <td class="table_detail e s" nowrap="nowrap">
+                ${order.custom.apruvdStatus || ''}
+            </td>
+            <td class="table_detail e s" nowrap="nowrap">
+                <isset name="apruvdHelper" value="${require('*/cartridge/scripts/service/apruvd')}" scope="page" />
+                <isset name="isElevateAvailable" value="${apruvdHelper.isElevateAvailable(order)}" scope="page" />
+                <form action="${URLUtils.url('ApruvdBM-Elevate')}" method="post" name="formMask">
+                    <table border="0" cellspacing="4" cellpadding="0">
+                        <tr>
+                            <td class="button">
+                                <isif condition="${empty(order.custom.apruvdStatus)}">
+                                    <input type="submit" name="submit" value="Submit" class="button"/>
+                                </isif>
+                                <input type="hidden" name="orderId" value="${order.orderNo}"/>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </td>
+        </tr>
+    </isloop>
+
+</table>
+<table>
+    <tr valign="top">
+        <td>
+            <isif condition="${!empty(pdict.prevPageUrl)}">
+                <a href="${pdict.prevPageUrl}">Previous page</a>
+            </isif>
+        </td>
+    </tr>
+    <tr valign="top">
+        <td>
+            <isif condition="${!empty(pdict.nextPageUrl)}">
+                <a href="${pdict.nextPageUrl}">Next page</a>
+            </isif>
+        </td>
+    </tr>
+</table>
+
+<!-- EO Main Content -->
+
+<table class="bottombuttons">
+    <form name="Back" action="${TOP_URL}" method="post">
+        <tr>
+            <td>
+                <input class="button" type="submit" name="backToPrefs" value="&lt;&lt; Back"/>
+            </td>
+        </tr>
+    </form>
+</table>
+<!-- EO Working Area -->
+
+</isdecorate>

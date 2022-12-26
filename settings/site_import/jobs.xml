@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jobs xmlns="http://www.demandware.com/xml/impex/jobs/2015-07-01">
+  <job job-id="Apruvd-CreateMissingTransactions" priority="0">
+    <description/>
+    <parameters/>
+    <flow>
+      <context site-id="RefArch"/>
+      <step step-id="CreateMissingTransactions" type="ExecuteScriptModule" enforce-restart="false">
+        <description/>
+        <parameters>
+          <parameter name="ExecuteScriptModule.Module">int_apruvd/cartridge/scripts/job/CreateMissingTransactions.js</parameter>
+          <parameter name="ExecuteScriptModule.FunctionName">execute</parameter>
+          <parameter name="ExecuteScriptModule.Transactional">false</parameter>
+        </parameters>
+      </step>
+    </flow>
+    <rules/>
+    <triggers>
+      <run-once enabled="false">
+        <date>2019-03-04Z</date>
+        <time>20:23:40.000Z</time>
+      </run-once>
+    </triggers>
+  </job>
+</jobs>
