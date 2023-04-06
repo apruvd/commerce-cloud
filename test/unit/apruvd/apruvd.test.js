@@ -13,9 +13,7 @@ var proxyquireStubs = {
 	},
 	session : {
 		sessionID: "assertionData",
-		privacy: {
-			apruvdVersion: "V3"
-		}
+		privacy: {}
 	},
     tempValue: {},
     Site: {

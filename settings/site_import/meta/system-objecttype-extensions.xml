@@ -22,13 +22,6 @@
         <externally-managed-flag>true</externally-managed-flag>
         <min-length>0</min-length>
       </attribute-definition>
-      <attribute-definition attribute-id="apruvdBasicRulesTripped">
-        <display-name xml:lang="x-default">Basic Rules Tripped</display-name>
-        <type>string</type>
-        <mandatory-flag>false</mandatory-flag>
-        <externally-managed-flag>true</externally-managed-flag>
-        <min-length>0</min-length>
-      </attribute-definition>
       <attribute-definition attribute-id="apruvdChargebackCaseId">
         <display-name xml:lang="x-default">Chargeback Case ID</display-name>
         <type>string</type>
@@ -55,7 +48,6 @@
         <display-name xml:lang="x-default">Apruvd</display-name>
         <attribute attribute-id="apruvdCheckOrder"/>
         <attribute attribute-id="apruvdStatus"/>
-        <attribute attribute-id="apruvdBasicRulesTripped"/>
         <attribute attribute-id="apruvdChargebackCaseId"/>
         <attribute attribute-id="apruvdChargebackStatus"/>
         <attribute attribute-id="apruvdChargebackPaid"/>
@@ -181,13 +173,6 @@
         <type>password</type>
         <mandatory-flag>false</mandatory-flag>
         <externally-managed-flag>false</externally-managed-flag>
-      </attribute-definition>
-      <attribute-definition attribute-id="MJSId">
-        <display-name xml:lang="x-default">Merchant JS ID</display-name>
-        <type>string</type>
-        <mandatory-flag>false</mandatory-flag>
-        <externally-managed-flag>false</externally-managed-flag>
-        <min-length>0</min-length>
       </attribute-definition>
       <attribute-definition attribute-id="apruvdIndemnifiedPaymentMethods">
         <display-name xml:lang="x-default">Indemnified Payment Methods</display-name>
