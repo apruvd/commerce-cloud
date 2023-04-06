@@ -23,7 +23,6 @@ function createTransaction(order) {
         Transaction.wrap(function() {
             order.custom.apruvdStatus = createTransactionResponse["status"];
             order.custom.apruvdTransactionID = createTransactionResponse["transaction_id"];
-            order.custom.apruvdBasicRulesTripped = JSON.stringify(createTransactionResponse["basic_rules_tripped"]);
             order.custom.apruvdCheckOrder = false;
         });
     }
@@ -44,7 +43,6 @@ function getTransaction(order) {
     if (getTransactionResponse) {
         Transaction.wrap(function() {
             order.custom.apruvdStatus = getTransactionResponse["status"];;
-            order.custom.apruvdBasicRulesTripped = JSON.stringify(getTransactionResponse["basic_rules_tripped"]);
             order.custom.apruvdCheckOrder = false;
         });
     }
@@ -93,13 +91,11 @@ function isElevateAvailable(order) {
         servicePlan = apruvdTokensCO.custom.apruvdServicePlan;
         switch (servicePlan) {
             case 'Basic':
-                var basicRulesTripped = order.custom.apruvdBasicRulesTripped || [];
-                if (JSON.parse(basicRulesTripped).length < 1) {
-                    isElevateAvailable = false;
-                }
+                isElevateAvailable = false;
                 break;
             case 'Complete Coverage':
                 isElevateAvailable = false;
+                break;
             default:
                 isElevateAvailable = true;
                 break;
@@ -126,7 +122,6 @@ function isSendTransaction() {
  */
 function isTrainingData() {
     var apruvdTokensCO = CustomObjectMgr.getCustomObject('apruvdTokens', SitePreferences.custom.apruvdMerchantId);
-
     return apruvdTokensCO ? apruvdTokensCO.custom.apruvdTrainingData : false;
 }
 
@@ -185,14 +180,8 @@ function processMerchantSettings(obj) {
     if (obj) {
         Transaction.wrap(function() {
             var apruvdTokensCO = CustomObjectMgr.getCustomObject('apruvdTokens', merchantId) || CustomObjectMgr.createCustomObject('apruvdTokens', merchantId);
-            apruvdTokensCO.custom.apruvdDataConnection = obj['data_connection'];
             apruvdTokensCO.custom.apruvdServicePlan = obj['service_plan'];
-            apruvdTokensCO.custom.apruvdTrainingData = obj['training_data'];
-            apruvdTokensCO.custom.apruvdBasicRules = JSON.stringify(obj['basic_rules']);
-            apruvdTokensCO.custom.apruvdRequireNotesOnApproves = obj['require_notes_on_approves'];
-            apruvdTokensCO.custom.apruvdRequireNotesOnDeclines = obj['require_notes_on_declines'];
             apruvdTokensCO.custom.apruvdEnforceUniqueOrderId = obj['enforce_unique_order_id'];
-            apruvdTokensCO.custom.apruvdVersion = obj['integration_version'];
         });
     }
 }
